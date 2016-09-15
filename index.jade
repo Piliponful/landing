@@ -1,0 +1,119 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+
+    title KickstarterGame.io
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel="stylesheet", href="style.css")
+    link(href="https://fonts.googleapis.com/css?family=Raleway|Roboto:300,400" rel="stylesheet")
+    link(href="animate.css" rel="stylesheet")
+
+
+    // if lt IE 9
+      script(src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.min.js')
+      script(src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js')
+  body
+    nav.navbar.navbar-fixed-top.navbar-inverse
+      .container
+        .navbar-header
+          button(type='button' data-toggle='collapse' data-target='#navbar-collapsed').navbar-toggle.collapsed
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index.html') KickstarterGame.io <img class='logo' src='img/gamepad.svg'></img>
+        .collapse.navbar-collapse#navbar-collapsed
+          ul.nav.navbar-nav.navbar-right
+            li.active: a(href='#home') Home
+            li: a(href='#testimonials') About
+            li: a(href='#team') Our team
+            li: a(href='#signup') Sign Up
+    .cover#home
+      .cover-text
+        h1 You probably haven&rsquo;t heard of us<b class='animated bounce'>?</b>
+        p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quo iste debitis praesentium obcaecati neque, fuga, laudantium illum accusamus velit voluptatum consequatur molestias.
+        a.btn.btn-danger.btn-lg(href="#") Watch trailer
+        .container
+          .row
+
+
+    section#testimonials
+      .container
+        div(data-scrollreveal="enter bottom over 1s and move 100px")
+          blockquote.
+            &ldquo;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil excepturi, eaque iste aspernatur. Id, quasi aut natus nostrum, fugit distinctio culpa dolores quae debitis hic, sed iste neque totam asperiores.
+            &rdquo;
+            <cite>&mdash;Lead Developer</cite>
+
+
+    section#why-us
+      h2 Why our game is awesome?
+      .container
+        .row
+          .col-sm-4
+            h3 Deep complex plot
+            p.
+              Cornhole chicharrones cronut yuccie vegan, ethical selfies hammock cardigan. Brooklyn shabby chic sriracha, beard bicycle rights pickled pop-up fixie blog sartorial. Cornhole hella master cleanse microdosing chicharrones irony austin pop-up, yr banjo williamsburg pinterest plaid sriracha venmo. 
+          .col-sm-4
+            h3 Interesting characters
+            p.
+              Selvage aesthetic 90's meh typewriter keffiyeh echo park. Intelligentsia blue bottle yr dreamcatcher forage venmo. Vice next level migas, keytar etsy mlkshk direct trade ethical normcore chambray. Microdosing PBRB cray man braid, mlkshk offal small batch fixie direct trade vinyl ethical ennui.
+          .col-sm-4
+            h3 Innovative gameplay
+            p.
+              Blue bottle chambray thundercats fixie, four dollar toast health goth gluten-free tousled put a bird on it four loko yr lomo. Letterpress you probably haven't heard of them stumptown umami, literally art party authentic quinoa migas salvia PBRB freegan plaid pork belly. Semiotics cliche franzen mlkshk roof party literally beard.
+
+    section#team
+      .container
+        h2 Meat our team
+        .row
+          .col-sm-3
+            img.img-circle(src="img/jane-doe.jpg", alt="women")
+            h4 Jane Doe
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate esse similique obcaecati optio dolore ut hic laboriosam perspiciatis aspernatur vero!
+          .col-md-3
+            img.img-circle(src="img/john-doe.jpg", alt="man")
+            h4 John Doe
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate esse similique obcaecati optio dolore ut hic laboriosam perspiciatis aspernatur vero!
+          .col-sm-3
+            img.img-circle(src="img/jim-doe.jpg", alt="man")
+            h4 Jim Doe
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate esse similique obcaecati optio dolore ut hic laboriosam perspiciatis aspernatur vero!
+          .col-sm-3
+            img.img-circle(src="img/janny-doe.jpg", alt="women")
+            h4 Janny Doe
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate esse similique obcaecati optio dolore ut hic laboriosam perspiciatis aspernatur vero!
+
+
+    section#signup
+      .container
+        h2 Get latest news about the game
+        p.first-k.lead You will be first who will know...
+        .row
+          .col-sm-8.col-sm-offset-2
+            form
+              .input-group
+                input.form-control.input-lg(type="text" placeholder='Put your real address in here...')
+                span.input-group-btn
+                  button.btn.btn-warning.btn-lg.handcraft(type='button') Handcraft it
+    footer.
+      crafted with <b>&hearts;</b> by piliponful
+
+    script(src="https://code.jquery.com/jquery-2.0.2.min.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='js/jquery.magnific-popup.min.js')
+    script(src='owl-carousel/owl.carousel.js')
+    script(src='js/script.js')
+    script(src='scrollreveal.min.js')
+    script(src='Velocity.js')
+    script.
+      $("[href='#team']").on('click', function() {
+        $('#team').velocity("scroll", {easing:'easeInOutExpo', duration:1000});
+      });
